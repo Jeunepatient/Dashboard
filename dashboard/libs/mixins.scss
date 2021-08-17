@@ -1,0 +1,67 @@
+@mixin triangle($size: espace(1.5), $couleurtriangle:#fff){
+    position: relative;
+    &::after{
+        content:"";
+        position : absolute;
+        top:50%;
+        transform: translateY(-50%);
+        left:97%;
+        border-style: solid;
+        border-width: $size;
+        border-color:$couleurtriangle transparent transparent transparent;
+    }
+}
+@mixin text($font-base:17px, $couleurtext:#19a8d9) {
+             text-transform: uppercase;
+            font-family: sans-serif;
+            font-size:$font-base;
+            color:$couleurtext;
+}
+
+@mixin triangle1($size: espace(5), $couleurtriangle:$orangeclair){
+    position: relative;
+    &::after{
+        content:"";
+        position : absolute;
+        top:0;
+        left:50%;
+        transform: translate(-50%, 0%);
+       border-top:$size solid $couleurtriangle;
+       border-left:$size solid transparent;
+       border-right: $size solid transparent;
+        
+    }
+}
+
+@mixin fleche($size: espace(2), $couleurtriangle:#aaa, $cote: 4px){
+    position: relative;
+    cursor: pointer;
+    &::after{
+        content:"";
+        position : absolute;
+        top:48%;
+        left:95%;
+        width:$cote;
+        height:$cote;
+        transform: rotateZ(45deg);
+        border-color:$couleurtriangle;
+        border-style: solid;
+        border-width: 0 $size $size 0;
+    }
+}
+@mixin fleche2($size: espace(3), $couleurtriangle:#aaa, $cote: 4px){
+    position: relative;
+    cursor: pointer;
+    &::after{
+        content:"";
+        position : absolute;
+        top:48%;
+        left:80%;
+        width:$cote;
+        height:$cote;
+        transform: rotateZ(45deg);
+        border-color:$couleurtriangle;
+        border-style: solid;
+        border-width: $size 0 0 $size;
+    }
+}

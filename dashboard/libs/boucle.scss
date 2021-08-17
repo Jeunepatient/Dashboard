@@ -1,0 +1,53 @@
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        grid-column: span $i;
+        @if ($i == 5) {
+            .col-#{$i}{
+                text-decoration: none;
+                color:#000;
+            }
+        }
+    }
+}
+
+
+@for $j from 1 through 45 {
+    .mr-#{$j}{
+        margin-right:($j * 0.25rem);
+    }
+}
+@for $o from 1 through 100 {
+    .mt-#{$o}{
+        margin-top:($o * 0.25rem);
+    }
+}
+
+@for $f from 1 through 100 {
+    .mb-#{$f}{
+        margin-bottom:($f * 0.25rem);
+    }
+}
+
+@for $s from 1 through 45 {
+    .pl-#{$s}{
+        padding-left:($s * 0.25rem);
+    }
+}
+
+@for $p from 1 through 45 {
+    .pt-#{$p}{
+        padding-top:($p * 0.25rem);
+    }
+}
+
+@for $j from 1 through 45 {
+    .ml-#{$j}{
+        margin-left:($j * 0.25rem);
+    }
+}
+
+@for $j from 1 through 45 {
+    .m-#{$j}{
+        margin:0 ($j * 0.25rem);
+    }
+}

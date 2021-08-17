@@ -1,0 +1,9 @@
+$font-base:16px;
+@function espace($taille, $base:$font-base) {
+    @return 1rem * ($taille/enlever($base));
+}
+@function enlever($valeur){
+    @if type-of($valeur) =="number" and not unitless($valeur){
+        @return $valeur/($valeur * 0 + 1);
+    }
+}
